@@ -29,16 +29,15 @@ if "%msg%"=="" (
 
 echo.
 echo ===== Stagen =====
+if exist "public\locatie.png" git add public\locatie.png
 git add .
 echo.
 echo ===== Committen =====
 git commit -m "%msg%"
 if errorlevel 1 (
-  echo Commit mislukt of niets te committen.
-  pause
-  exit /b 1
+  echo Niets te committen - working tree clean. Push eventuele eerdere commits?
+  echo.
 )
-echo.
 echo ===== Pushen naar GitHub =====
 git push
 if errorlevel 1 (
