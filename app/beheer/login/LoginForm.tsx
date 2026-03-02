@@ -21,7 +21,7 @@ export default function LoginForm() {
         : null
   );
 
-  let supabase;
+  let supabase: ReturnType<typeof createClient>;
   try {
     supabase = createClient();
   } catch (err) {
