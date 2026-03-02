@@ -21,7 +21,7 @@ export default function SiteHeader() {
         className="header__location"
       >
         <span className="header__location-icon" aria-hidden="true">
-          <img src="/locatie.png" alt="" className="header__location-icon-img" />
+          <img src="/Locatie.png" alt="" className="header__location-icon-img" />
         </span>
         <span className="header__location-address">Menistenplein 10, Stadskanaal</span>
       </a>
