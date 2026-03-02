@@ -10,7 +10,7 @@ export default function WachtwoordVergetenPage() {
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  let supabase;
+  let supabase: ReturnType<typeof createClient>;
   try {
     supabase = createClient();
   } catch {

@@ -13,7 +13,7 @@ export default function WachtwoordResetPage() {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
-  let supabase;
+  let supabase: ReturnType<typeof createClient>;
   try {
     supabase = createClient();
   } catch {

@@ -7,7 +7,7 @@ import BeheerDashboard from "./BeheerDashboard";
 const SUPER_ADMIN_EMAIL = "admin@mingelmous.nl";
 
 export default async function BeheerPage() {
-  let supabase;
+  let supabase: Awaited<ReturnType<typeof createClient>>;
   try {
     supabase = await createClient();
   } catch {
